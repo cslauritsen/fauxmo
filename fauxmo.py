@@ -42,7 +42,7 @@ from pyicloud import PyiCloudService
 import yaml
 
 
-ICLOUD_REFRESH_SECONDS = 30 # 5 * 60
+ICLOUD_REFRESH_SECONDS = 5 * 60
 _icloudRefreshing = False
 
 # This XML is the minimum needed to define one of our virtual switches
