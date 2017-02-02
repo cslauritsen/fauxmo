@@ -399,7 +399,7 @@ class icloud_api_handler(object):
         while(_icloudRefreshing):
             time.sleep(1);
             dbg("Waiting for iCloud to refresh")
-        self.icloud_device.lost_device('216-751-4709', text="Imperialist American, Your device has been pwned.\nSincerely,\nChinese Hackers.")
+        self.icloud_device.lost_device('216-555-1212', text="Imperialist American, Your device has been pwned.\nSincerely,\nChinese Hackers.")
         return True
 
 class mqtt_garage_handler(object):
@@ -459,13 +459,9 @@ fport = 45816
 FAUXMOS = [
     #['office lights', rest_api_handler('http://192.168.5.4/ha-api?cmd=on&a=office', 'http://192.168.5.4/ha-api?cmd=off&a=office')],
     # The garage door is a button push, on & off are the same action
-    # XXX does wemo have a 'toggle' concept?
     ['garage door', mqtt_garage_handler("/home/garage/door/control/south/toggle"
             , "/home/garage/door/control/south/toggle"), fport]
 
-#    , ["Chad's iPhone", icloud_api_handler(icloud_api.devices[0]), 45187 ]
-##    , ["Harris iPod", icloud_api_handler(icloud_api.devices[1]), 45188 ]
-#    , ["Kim's iPhone", icloud_api_handler(icloud_api2.devices[0]), 45189 ]
 ]
 
 for i in iclouds:
